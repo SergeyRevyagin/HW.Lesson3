@@ -40,11 +40,12 @@ public class Lesson3 {
         Random ran = new Random();
         int numComp = ran.nextInt(10);
         int counter = 0;
-        if (scan.hasNextInt()) {
-            int numHum = scan.nextInt();
+        int numHum = 0;
+
             do {
 
                 System.out.println("Введите свое число: ");
+                numHum = scan.nextInt();
 
 
                 if (numHum < numComp) {
@@ -76,7 +77,8 @@ public class Lesson3 {
             }
 
         }
-    }
+
+
     public static void Task2() {
         System.out.println("В процессе");
     }
