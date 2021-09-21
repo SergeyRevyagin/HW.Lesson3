@@ -1,9 +1,9 @@
-package HomeWork.Lesson3.HomeWork;
+package HomeWork.HW;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Test {
+public class Lesson3 {
     static Scanner scan = new Scanner(System.in);
     static Random ran = new Random();
 
@@ -41,19 +41,42 @@ public class Test {
 
 
         }
-        if(counter==3|| !win){
+        if(counter==3&& !win){
             System.out.println("Ты проиграл\nНачать снова - нажми 1\nВыйти- нажми что угодно");
+
         }
-        if (!scan.hasNextInt()||scan.nextInt()==0) {
+        if(scan.hasNextInt()) {
+            int numHum = scan.nextInt();
+            if (numHum == 1) {
+                Task1();
+            }else{
+                System.out.println("Пока");
+                System.out.println("Для выбора игры нажмите соответствующую цифру\n1- Угадай число\n2- Угадай слово\n0 - выход из приложения\nЧто выбираете?");
+                
+            }
+        }
+
+        if (!scan.hasNextInt()) {
             System.out.println("Пока");
             scan.next();
             System.out.println("Для выбора игры нажмите соответствующую цифру\n1- Угадай число\n2- Угадай слово\n0 - выход из приложения\nЧто выбираете?");
-        } else {
-            int numHum = scan.nextInt();
-            if (numHum == 1) Task1();
         }
-    }
 
+        }
+
+
+    /*
+    String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"}.
+При запуске программы компьютер загадывает слово, запрашивает ответ у пользователя, сравнивает его с загаданным словом и сообщает, правильно ли ответил пользователь. Если слово не угадано, компьютер показывает буквы, которые стоят на своих местах.
+apple – загаданное
+apricot - ответ игрока
+ap############# (15 символов, чтобы пользователь не мог узнать длину слова)
+Для сравнения двух слов посимвольно можно пользоваться:
+String str = "apple";
+char a = str.charAt(0); - метод, вернет char, который стоит в слове str на первой позиции
+Играем до тех пор, пока игрок не отгадает слово.
+Используем только маленькие буквы.
+     */
     public static void Task2() {
         System.out.println("пока думаю");
     }
