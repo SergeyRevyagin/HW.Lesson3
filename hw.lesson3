@@ -106,7 +106,7 @@ char a = str.charAt(0); - метод, вернет char, который стои
 
             } else {
                 System.out.println("Вы ввели некорректные данные .\nПожалуйста, повторите попытку ввода.");
-                scan.next();
+                scan.nextLine();;
 
 
             }
